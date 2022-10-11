@@ -1,0 +1,9 @@
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\Centralita.DAL.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\Centralita.DAL.pdb
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.csproj.AssemblyReference.cache
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.csproj.CoreCompileInputs.cache
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.pdb
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\Centralita.CORE.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\Centralita.CORE.pdb
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.csproj.CopyComplete

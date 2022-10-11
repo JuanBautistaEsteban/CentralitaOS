@@ -1,0 +1,6 @@
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.CORE\bin\Debug\Centralita.CORE.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.CORE\bin\Debug\Centralita.CORE.pdb
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.CORE\obj\Debug\Centralita.CORE.csproj.AssemblyReference.cache
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.CORE\obj\Debug\Centralita.CORE.csproj.CoreCompileInputs.cache
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.CORE\obj\Debug\Centralita.CORE.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.CORE\obj\Debug\Centralita.CORE.pdb
