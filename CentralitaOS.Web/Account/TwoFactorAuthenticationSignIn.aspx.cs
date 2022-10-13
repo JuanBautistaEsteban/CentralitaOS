@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using CentralitaOS.Web.Models;
+using Centralita.CORE;
 
 namespace CentralitaOS.Web.Account
 {

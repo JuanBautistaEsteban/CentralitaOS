@@ -6,7 +6,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using CentralitaOS.Web.Models;
+using Centralita.CORE;
+using Centralita.DAL;
 
 namespace CentralitaOS.Web
 {

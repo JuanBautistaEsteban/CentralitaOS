@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using CentralitaOS.Web.Models;
+using Centralita.CORE;
 
 namespace CentralitaOS.Web.Account
 {

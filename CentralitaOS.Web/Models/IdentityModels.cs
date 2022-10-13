@@ -6,40 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using CentralitaOS.Web.Models;
+using Centralita.CORE;
 
-namespace CentralitaOS.Web.Models
-{
-    // Para agregar datos del usuario, agregue más propiedades a su clase de usuario. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
-    public class ApplicationUser : IdentityUser
-    {
-        public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
-        {
-            // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType
-            var userIdentity = manager.CreateIdentity(this, DefaultAuthenticationTypes.ApplicationCookie);
-            // Agregar aquí notificaciones personalizadas de usuario
-            return userIdentity;
-        }
 
-        public Task<ClaimsIdentity> GenerateUserIdentityAsync(ApplicationUserManager manager)
-        {
-            return Task.FromResult(GenerateUserIdentity(manager));
-        }
-    }
-
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
-        {
-        }
-
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
-    }
-}
 
 #region Aplicaciones auxiliares
 namespace CentralitaOS.Web

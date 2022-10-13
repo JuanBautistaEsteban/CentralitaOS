@@ -9,3 +9,16 @@ C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Ce
 C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Centralita.CORE.pdb
 C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Centralita.DAL.pdb
 C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\obj\Debug\Centralita.Application.csproj.CopyComplete
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Centralita.Application.dll.config
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\EntityFramework.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Centralita.CORE.dll.config
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Centralita.DAL.dll.config
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\EntityFramework.xml
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.Application\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll

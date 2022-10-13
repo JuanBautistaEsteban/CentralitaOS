@@ -112,3 +112,6 @@ C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.DAL
 C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.Application.pdb
 C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.CORE.pdb
 C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.DAL.pdb
+C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.Application.dll.config
+C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.CORE.dll.config
+C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.DAL.dll.config
