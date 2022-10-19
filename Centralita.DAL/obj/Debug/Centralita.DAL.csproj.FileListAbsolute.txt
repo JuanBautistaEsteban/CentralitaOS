@@ -19,3 +19,7 @@ C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\Microsoft.
 C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.Migrations.Init.resources
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.csproj.GenerateResource.cache
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.Migrations.AddAliasInIncidence.resources
+C:\Users\jbautista\source\repos\CentralitaOS\Centralita.DAL\obj\Debug\Centralita.DAL.Migrations.RemoveAliasInIncidence.resources

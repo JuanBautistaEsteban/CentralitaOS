@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 namespace Centralita.CORE
 {
     // Para agregar datos del usuario, agregue más propiedades a su clase de usuario. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
+    /// <summary>
+    /// Entidad de dominio Usuario
+    /// </summary>
     public class ApplicationUser : IdentityUser
     {
         public ClaimsIdentity GenerateUserIdentity(UserManager<ApplicationUser> manager)
@@ -24,5 +27,13 @@ namespace Centralita.CORE
         {
             return Task.FromResult(GenerateUserIdentity(manager));
         }
+
+        
+
+        /// <summary>
+        /// Código Postal
+        /// </summary>
+        public string PostalCode { get; set; }
+      
     }
 }

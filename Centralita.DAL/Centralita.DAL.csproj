@@ -58,6 +58,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\202210191114251_Init.cs" />
+    <Compile Include="Migrations\202210191114251_Init.designer.cs">
+      <DependentUpon>202210191114251_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210191147170_AddAliasInIncidence.cs" />
+    <Compile Include="Migrations\202210191147170_AddAliasInIncidence.designer.cs">
+      <DependentUpon>202210191147170_AddAliasInIncidence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210191154110_RemoveAliasInIncidence.cs" />
+    <Compile Include="Migrations\202210191154110_RemoveAliasInIncidence.designer.cs">
+      <DependentUpon>202210191154110_RemoveAliasInIncidence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +82,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210191114251_Init.resx">
+      <DependentUpon>202210191114251_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210191147170_AddAliasInIncidence.resx">
+      <DependentUpon>202210191147170_AddAliasInIncidence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210191154110_RemoveAliasInIncidence.resx">
+      <DependentUpon>202210191154110_RemoveAliasInIncidence.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

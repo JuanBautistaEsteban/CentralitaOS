@@ -58,6 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
+    <Compile Include="Incidence.cs" />
+    <Compile Include="IncidencePriority.cs" />
+    <Compile Include="IncidenceStatus.cs" />
+    <Compile Include="IncidenceType.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
