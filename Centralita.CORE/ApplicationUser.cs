@@ -28,12 +28,12 @@ namespace Centralita.CORE
             return Task.FromResult(GenerateUserIdentity(manager));
         }
 
-        
-
         /// <summary>
         /// Código Postal
         /// </summary>
         public string PostalCode { get; set; }
+
+
       
     }
 }
