@@ -59,7 +59,11 @@ namespace CentralitaOS.Web.Admin
             }
 
         }
-
+        /// <summary>
+        /// Mostrar u ocultar contraseña.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             string texto = UserPass.Text.Trim(new char[] { ' ' });
