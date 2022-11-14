@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IncidenceEdit.aspx.cs" Inherits="CentralitaOS.Web.Client.IncidenceEdit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="../Content/Bubble.css" rel="stylesheet" />
     <div class ="form-horizontal">
         <h4>Editar incidencia</h4>
-
         <asp:HiddenField ID="txtId" runat="server" />
-
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger "/>
         <div class ="form-group ">
             <asp:Label ID="Label1" runat="server" Text="Nombre del equipo:" CssClass ="col-md-3" AssociatedControlID ="txtEquiment"></asp:Label>
@@ -31,4 +30,7 @@
            </div>
         </div>
     </div>
+    <div class="speech-wrapper" style ="background-color : #ffd800" id="messages" runat="server" >
+    </div>
+
 </asp:Content>

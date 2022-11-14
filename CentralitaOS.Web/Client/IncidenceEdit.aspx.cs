@@ -8,18 +8,19 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CentralitaOS.Web.Controles;
 
 namespace CentralitaOS.Web.Client
 {
     public partial class IncidenceEdit : System.Web.UI.Page
     {
-        IncidenceManager incidenceManager = null;
         // Ahora creamos un contexto de base de datos, que se lo pasaremos al constructor del incidenceManager
-        ApplicationDbContext context = new ApplicationDbContext();
+        ApplicationDbContext context = null;
+        IncidenceManager incidenceManager = null;
         MessageManager messageManager = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            context = new ApplicationDbContext();
             incidenceManager = new IncidenceManager(context);
             messageManager = new MessageManager(context);
 
@@ -44,19 +45,6 @@ namespace CentralitaOS.Web.Client
                 }
             }
         }
-
-
-
-
-        private void CargarIncidencia(Incidence incidence)
-        {
-            // Almacenamos en el campo oculto el valor de id de la incidencia
-            txtId.Value = incidence.Id.ToString();
-            txtEquiment.Text = incidence.Equipment;
-            dllType .Text = incidence.IncidenceType .ToString();    
-
-        }
-
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -68,8 +56,12 @@ namespace CentralitaOS.Web.Client
                     User_Id = User.Identity.GetUserId(),
                     Incidence_Id = int.Parse(txtId .Value)
                 };
-                messageManager.Add (message);
+                var incidence = incidenceManager.GetByIdWithMessage (int.Parse(txtId.Value));
+                incidence.Messages.Add(message);
                 context.SaveChanges();
+
+                CargarIncidencia (incidence);
+                txtIncidence.Text = "";
 
             }
             catch (Exception ex)
@@ -84,5 +76,33 @@ namespace CentralitaOS.Web.Client
             }
 
         }
+        private void CargarIncidencia(Incidence incidence)
+        {
+            // Cargamos los datos de la incidencia: lo que son estaticos y tienen pintado los controles
+            // en el formulario
+            // Almacenamos en el campo oculto el valor de id de la incidencia
+            txtId.Value = incidence.Id.ToString();
+            txtEquiment.Text = incidence.Equipment;
+            dllType.Text = incidence.IncidenceType.ToString();
+            //txtEquiment.Text = incidence.User.UserName ;
+
+
+
+            // Ahora es necesario ir añadiendo un control Bubbles por cada un de los mensajes que
+            // estén vinculados a esta incidencia.
+
+            var content = (ContentPlaceHolder)Master.FindControl("MainContent");
+            var div = content.FindControl("messages");
+            div.Controls.Clear();
+            foreach (var message in incidence.Messages)
+            {
+                var control = (Bubble)Page.LoadControl("~/Controles/Bubble.ascx");
+                control.Message = message;
+                control.userName = User.Identity.GetUserName();
+                div.Controls.Add(control);
+            }
+
+        }
+
     }
 }
