@@ -171,6 +171,7 @@
     <Content Include="Admin\WebForm1.aspx" />
     <Content Include="Client\IncidenceCreate.aspx" />
     <Content Include="Client\IncidenceEdit.aspx" />
+    <Content Include="Client\IncidenceList.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -193,6 +194,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="Admin\Web.config" />
+    <Content Include="Client\IncidenceServiceList.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -223,6 +225,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="System.Linq.Dynamic.dll" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -372,6 +375,16 @@
     </Compile>
     <Compile Include="Client\IncidenceEdit.aspx.designer.cs">
       <DependentUpon>IncidenceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\IncidenceList.aspx.cs">
+      <DependentUpon>IncidenceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\IncidenceList.aspx.designer.cs">
+      <DependentUpon>IncidenceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\IncidenceServiceList.ashx.cs">
+      <DependentUpon>IncidenceServiceList.ashx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
