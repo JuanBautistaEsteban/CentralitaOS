@@ -6,6 +6,6 @@
         <p class="text" runat ="server" ><asp:Label ID="text" runat="server" Text=""></asp:Label></p>
         <span class="timestamp"><asp:Label ID="date" runat="server" Text=""></asp:Label> </span>
     </div>
-    <div class ="bubble-arrow <%=!IsAdmin ?"alt":""%>"></div>
+   <!-- <div class ="bubble-arrow <%=!IsAdmin ?"alt":""%>"></div> -->
 </div>
 <br />
