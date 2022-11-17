@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Centralita.Application;
+using Centralita.DAL;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +14,9 @@ namespace CentralitaOS.Web.Client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ApplicationDbContext contextdb = new ApplicationDbContext();
+            IncidenceManager incidenceManager = new IncidenceManager(contextdb);
+            Usuario.Text = User.Identity.GetUserId() ;
         }
     }
 }

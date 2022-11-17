@@ -1,20 +1,80 @@
-﻿using System;
+﻿using Centralita.Application;
+using Centralita.DAL;
+using CentralitaOS.Web.Models;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 
 namespace CentralitaOS.Web.Client
 {
     /// <summary>
-    /// Descripción breve de IncidenceServiceList
+    /// Con este sevicio es con el que se realizan las consultas para cargar los datos en la tabla
+    /// de la página IncidenceList.
     /// </summary>
     public class IncidenceServiceList : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hola a todos");
+            // Parámetros que serán enviados por el plugin y devolverán los datos. Los recogemos aquí.
+            var iDisplayLength = int.Parse(context.Request["iDisplayLength"]);
+            var iDisplayStart = int.Parse(context.Request["iDisplayStart"]);
+            var sSearch = context.Request["sSearch"];
+            var iSortDir = context.Request["iSortDir_0"];
+            var iSortCol = context.Request["iSortCol_0"];
+            var sortColum = context.Request.QueryString["mDataProp_" + iSortDir];
+
+            // Cargamos el contexto de datos y el manager de las incidencias.
+            ApplicationDbContext contextdb = new ApplicationDbContext();
+            IncidenceManager incidenceManager= new IncidenceManager (contextdb);
+
+            #region select
+            var allIncidences = incidenceManager .GetByUserId(context.User.Identity.GetUserId ());
+            var incidences = allIncidences.Select(p => new ClientIncidenceList
+            {
+                Id = p.Id,
+                Message = p.Messages.FirstOrDefault().Text,
+                Date = p.CreateDate,
+                Status = p.Status.ToString(),
+            });
+
+            #endregion
+
+            #region filtro
+            if (!string.IsNullOrWhiteSpace(sSearch))
+            {
+                string where = @"Id.ToString().Contains(@0) ||
+                                 Message.ToString().Contains(@0) ||
+                                 Date.ToString().Contains(@0) ||
+                                 Status.ToString().Contains(@0)";
+                incidences = incidences.Where(where, sSearch);
+
+            }
+            #endregion
+
+            #region Paginate
+            incidences = incidences
+                        .OrderBy(sortColum + " " + iSortDir)
+                        .Skip(iDisplayStart)
+                        .Take(iDisplayLength);
+
+            #endregion
+
+            var result = new
+            {
+                iTotalRecords = allIncidences.Count(),
+                iTotalDisplayRecords = allIncidences.Count(),
+                aaData = incidences
+            };
+
+            var serializer = new JavaScriptSerializer ();
+            var json = serializer.Serialize (result);  
+            context .Response .ContentType = "application/json";
+            context.Response.Write(json);   
+
         }
 
         public bool IsReusable
