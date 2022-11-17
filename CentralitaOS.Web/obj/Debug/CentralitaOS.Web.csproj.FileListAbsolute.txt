@@ -115,3 +115,4 @@ C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.DAL
 C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.Application.dll.config
 C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.CORE.dll.config
 C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\Centralita.DAL.dll.config
+C:\Users\jbautista\source\repos\CentralitaOS\CentralitaOS.Web\bin\System.Linq.Dynamic.dll

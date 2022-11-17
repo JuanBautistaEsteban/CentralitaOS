@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
+using System.Linq.Dynamic;
 
 namespace CentralitaOS.Web.Client
 {
@@ -23,9 +24,9 @@ namespace CentralitaOS.Web.Client
             var iDisplayLength = int.Parse(context.Request["iDisplayLength"]);
             var iDisplayStart = int.Parse(context.Request["iDisplayStart"]);
             var sSearch = context.Request["sSearch"];
-            var iSortDir = context.Request["iSortDir_0"];
+            var sSortDir = context.Request["sSortDir_0"];
             var iSortCol = context.Request["iSortCol_0"];
-            var sortColum = context.Request.QueryString["mDataProp_" + iSortDir];
+            var sortColum = context.Request.QueryString["mDataProp_" + iSortCol ];
 
             // Cargamos el contexto de datos y el manager de las incidencias.
             ApplicationDbContext contextdb = new ApplicationDbContext();
@@ -57,7 +58,7 @@ namespace CentralitaOS.Web.Client
 
             #region Paginate
             incidences = incidences
-                        .OrderBy(sortColum + " " + iSortDir)
+                        .OrderBy(sortColum + " " + sSortDir)
                         .Skip(iDisplayStart)
                         .Take(iDisplayLength);
 
