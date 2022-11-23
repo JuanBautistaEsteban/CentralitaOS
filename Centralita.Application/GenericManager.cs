@@ -90,5 +90,14 @@ namespace Centralita.Application
             // elemento.
             return (T)Context.Set<T>().Find (new object[] { Id });  
         }
+
+        /// <summary>
+        /// Obtiene todas la entidades de un tipo especificas
+        /// </summary>
+        /// <returns>Lista de todas esas entidades (por ejemplo incidencias)</returns>
+        public IQueryable <T> GetAll()
+        {
+            return Context.Set<T>();
+        }
     }
 }

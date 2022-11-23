@@ -171,6 +171,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\AddAdmins.aspx" />
+    <Content Include="Admin\IncidenceList.aspx" />
     <Content Include="Admin\WebForm1.aspx" />
     <Content Include="Client\IncidenceCreate.aspx" />
     <Content Include="Client\IncidenceEdit.aspx" />
@@ -198,6 +199,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="Admin\Web.config" />
     <Content Include="Client\IncidenceServiceList.ashx" />
+    <Content Include="Admin\IncidenceServiceList.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -346,6 +348,16 @@
     <Compile Include="Admin\AddAdmins.aspx.designer.cs">
       <DependentUpon>AddAdmins.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\IncidenceList.aspx.cs">
+      <DependentUpon>IncidenceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IncidenceList.aspx.designer.cs">
+      <DependentUpon>IncidenceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IncidenceServiceList.ashx.cs">
+      <DependentUpon>IncidenceServiceList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -412,6 +424,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminIncidenceList.cs" />
     <Compile Include="Models\ClientIncidenceList.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
